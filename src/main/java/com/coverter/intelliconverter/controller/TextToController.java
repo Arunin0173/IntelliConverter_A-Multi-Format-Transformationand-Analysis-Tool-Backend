@@ -1,6 +1,5 @@
 package com.coverter.intelliconverter.controller;
 import java.io.IOException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -12,13 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-<<<<<<< HEAD
+import com.coverter.intelliconverter.service.TextToServices;
 import com.coverter.intelliconverter.service.PdfService;
-import com.coverter.intelliconverter.service.TextToImageService;
-=======
-import com.coverter.intelliconverter.service.TextToService;
->>>>>>> ef831caaa2c708d05bf54fc00a8a0938f1760600
 
 @RestController
 @CrossOrigin
@@ -26,20 +20,10 @@ public class TextToController {
 	
 	//text to image 
 	
-<<<<<<< HEAD
+
 	    @Autowired 
-	    private TextToImageService textToImageService;
-=======
-	@RestController
-	@RequestMapping("/api")
-	public class TextToImageController {
+	    private TextToServices textToImageService;
 
-	    private final TextToService textToImageService;
-
-	    public TextToImageController(TextToService textToImageService) {
-	        this.textToImageService = textToImageService;
-	    }
->>>>>>> ef831caaa2c708d05bf54fc00a8a0938f1760600
 
 	    @GetMapping(value = "/textToImage", produces = MediaType.IMAGE_PNG_VALUE)
 	    public byte[] generateTextImage(@RequestParam("Text") String text) throws IOException {
