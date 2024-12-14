@@ -9,7 +9,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 @Service
-public class TextToImageServiceImpl implements TextToImageService {
+public class TextToServiceImplementation implements TextToService {
 
     @Override
     public byte[] generateImage(String text) throws IOException {

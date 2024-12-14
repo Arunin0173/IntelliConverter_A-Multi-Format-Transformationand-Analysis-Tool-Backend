@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.coverter.intelliconverter.service.TextToImageService;
+import com.coverter.intelliconverter.service.TextToService;
 
 @RestController
 @CrossOrigin
@@ -31,9 +31,9 @@ public class TextToController {
 	@RequestMapping("/api")
 	public class TextToImageController {
 
-	    private final TextToImageService textToImageService;
+	    private final TextToService textToImageService;
 
-	    public TextToImageController(TextToImageService textToImageService) {
+	    public TextToImageController(TextToService textToImageService) {
 	        this.textToImageService = textToImageService;
 	    }
 
