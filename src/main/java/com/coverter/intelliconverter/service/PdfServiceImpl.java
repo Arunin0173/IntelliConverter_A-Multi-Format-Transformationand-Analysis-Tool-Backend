@@ -33,11 +33,11 @@ public class PdfServiceImpl implements PdfService {
                 contentStream.setLeading(14.5f);
                 contentStream.newLineAtOffset(50, 700);
 
-                // Write the text line by line
+              
                 String[] lines = text.split("\n");
                 for (String line : lines) {
-                    // Split long lines to fit within margins
-                    while (line.length() > 80) { // Adjust this value based on your margin
+                   
+                    while (line.length() > 80) { 
                         contentStream.showText(line.substring(0, 80));
                         contentStream.newLine();
                         line = line.substring(80);
